@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<style>
+body{
+	background-color:MediumSeaGreen;	
+}
+form{
+ position: relative;
+  left: 500px;
+}
+</style>
+<body>
+<title>Diabetes Prection</title>
+<h1 style="text-align:center;">Diabetes Prediction</h1>
+<h2 style="text-align:center";>Prediction of Diabetes at Early Stage Using Data Mining Techniques</h2>
+<h4 style="text-align:center;color:red";>Please provide all the fields for predicting the Diabetes Test</h4>
+<form action="{{ url_for('predict')}}"method="post">
+	<label for="age">Age :<input style="position:relative;left:121px"; type="number" id="age" name="age" value=""><br></label><br>
+
+	<label for="gender">Gender:
+		<select style="position:relative;left:100px"; id="gender" name="gender">
+			<option value="Male">Male</option> 
+      			<option value="Female">Female</option> 
+    	</select><br></label>
+	
+	<label for="poly">Polyuria:
+		<select style="position:relative;left:93px";  id="poly" name="poly">
+			<option value="Yes">Yes</option> 
+      			<option value="No">No</option></label></select>
+			<br>
+
+	<label for="polyd">Polydisc:
+		<select style="position:relative;left:93px";  id="polyd" name="polyd">
+			<option value="Yes">Yes</option> 
+      			<option value="No">No</option></label></select><br>
+
+	<label for="swl">Sudden weight loss:</label>
+		<select style="position:relative;left:24px";  id="swl" name="swl">
+			<option value="Yes">Yes</option>			
+			<option value="No">No</option> 
+      		</select>
+		<br>	
+
+	<label for="weakness">Weakness:</label>
+		<select style="position:relative;left:85px";  id="weakness" name="weakness">
+			<option value="Yes">Yes</option>			
+			<option value="No">No</option> 
+      		</select>
+		<br>	
+
+	<label for="polyphagia">Polyphagia:</label>
+		<select style="position:relative;left:78px";  id="yes" name="polyphagia">
+			<option value="Yes">Yes</option>			
+			<option value="No">No</option> 
+      		</select>
+		<br>	
+
+	<label for="gential">Gential Thrush:</label>
+		<select style="position:relative;left:53px";  id="yes" name="gential">
+			<option value="Yes">Yes</option>			
+			<option value="No">No</option> 
+      		</select>
+		<br>	
+	<label for="visualblur">Visual blurring:</label>
+		<select style="position:relative;left:53px";  id="yes" name="visualblur">
+			<option value="Yes">Yes</option>			
+			<option value="No">No</option> 
+      		</select>
+		<br>
+
+	<label for="itching">Itching:</label>
+		<select style="position:relative;left:104px";  id="yes" name="itching">
+			<option value="Yes">Yes</option>			
+			<option value="No">No</option> 
+      		</select>
+		<br>
+
+	<label for="irritability">Irritability:</label>
+		<select style="position:relative;left:84px";  id="yes" name="irritability">
+			<option value="Yes">Yes</option>			
+			<option value="No">No</option> 
+      		</select>
+		<br>
+
+	<label for="heal">Delayed healing:</label>
+		<select style="position:relative;left:45px";  id="yes" name="heal">
+			<option value="Yes">Yes</option>			
+			<option value="No">No</option> 
+      		</select>
+		<br>
+	<label for="paresis">Partial paresis:</label>
+		<select style="position:relative;left:60px";  id="yes" name="paresis">
+			<option value="Yes">Yes</option>			
+			<option value="No">No</option> 
+      		</select>
+		<br>
+
+	<label for="stifness">Muscle stiffness:</label>
+		<select style="position:relative;left:46px";  id="yes" name="stifness">
+			<option value="Yes">Yes</option>			
+			<option value="No">No</option> 
+      		</select>
+		<br>
+
+	<label for="alopecia">Alopecia:</label>
+		<select style="position:relative;left:93px";  id="yes" name="alopecia" value="yes">
+			<option value="Yes">Yes</option>			
+			<option value="No">No</option> 
+      		</select>
+		<br>
+
+	<label for="obesity">Obesity:</label>
+		<select style="position:relative;left:101px";  id="yes" name="obesity">
+			<option value="Yes">Yes</option>			
+			<option value="No">No</option> 
+      		</select>
+		<br>
+
+	<button type="submit" class="btn-large">predict</button>	
+
+</form>
+<br>
+<br>
+{{ prediction_text }}
+</body>
+</html>
